@@ -5,6 +5,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    String userName = '';
+
+    return Scaffold(
+      appBar: AppBar(title: Text('hello $userName')),
+    );
   }
 }

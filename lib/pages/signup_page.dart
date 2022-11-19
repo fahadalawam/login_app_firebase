@@ -26,14 +26,20 @@ class _SignupPageState extends State<SignupPage> {
           child: Column(
             children: [
               TextFormField(
-                decoration: InputDecoration(border: OutlineInputBorder()),
+                decoration: InputDecoration(
+                  label: Text('email'),
+                  border: OutlineInputBorder(),
+                ),
                 onSaved: (val) {
                   email = val!;
                 },
               ),
               SizedBox(height: 20),
               TextFormField(
-                decoration: InputDecoration(border: OutlineInputBorder()),
+                decoration: InputDecoration(
+                  label: Text('password'),
+                  border: OutlineInputBorder(),
+                ),
                 onSaved: (val) {
                   pass = val!;
                 },

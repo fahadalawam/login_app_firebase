@@ -21,25 +21,38 @@ class _LoginPageState extends State<LoginPage> {
       ),
       body: Form(
         key: form,
-        child: Column(
-          children: [
-            TextFormField(
-              onSaved: (val) {
-                email = val!;
-              },
-            ),
-            TextFormField(
-              onSaved: (val) {
-                pass = val!;
-              },
-            ),
-            ElevatedButton(
-              onPressed: () {
-                form.currentState!.save();
-              },
-              child: Text('تسجيل'),
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(40.0),
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: InputDecoration(
+                  label: Text('email'),
+                  border: OutlineInputBorder(),
+                ),
+                onSaved: (val) {
+                  email = val!;
+                },
+              ),
+              SizedBox(height: 20),
+              TextFormField(
+                decoration: InputDecoration(
+                  label: Text('password'),
+                  border: OutlineInputBorder(),
+                ),
+                onSaved: (val) {
+                  pass = val!;
+                },
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  form.currentState!.save();
+                },
+                child: Text('دخول'),
+              ),
+            ],
+          ),
         ),
       ),
     );
